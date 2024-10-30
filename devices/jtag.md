@@ -7,28 +7,8 @@
 ### 2023.2
 
 
-To bringup a board using the Petalinux software the following needs to be done:
+To bring a board up using the Petalinux, software must be [built](../platforms/amd.md)
 
--   Install petalinux tools
--   Create petalinux project
--   Build Petalinux project
-
-
-#### Install
-
-```
-./petalinux-v2023.2-10121855-installer.run --dir /opt/Xilinx/Petalinux/
-```
-
-#### Create petalinux project
-For this step to work, a hardware definition file (XSA) has to be reated. This is done via setting up a project in **Vivado** and implement it. One can than export hardware from _File -> Export -> Export Hardware_
-
-```
-source /opt/Xilinx/Petalinux/settings.sh
-petalinux-create --type project --template zynqMP --name rainbee
-petalinux-config --get-hw-description <hardware_definition_file>.xsa
-petalinux-build
-```
 
 #### Programming the board
 
